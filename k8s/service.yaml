@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: valorant-site
+  labels:
+    app: valorant-site
+spec:
+  selector:
+    app: valorant-site
+    tier: frontend
+  ports:
+  - port: 80
