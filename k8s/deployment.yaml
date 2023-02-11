@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: valorant-site
+  labels:
+    app: valorant-site
+spec:
+  selector:
+    matchLabels:
+      app: valorant-site
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: valorant-site
+        tier: frontend
+    spec:
+      containers:
+      - name: valorant-site
+        image: ghcr.io/gathering/valorant.gathering.org:main
+        ports:
+        - name: web
+          containerPort: 80
+  strategy:
+    type: Recreate

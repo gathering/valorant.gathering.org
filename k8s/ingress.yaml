@@ -1,0 +1,17 @@
+
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: valorant-site
+spec:
+  entryPoints:
+  - websecure
+  routes:
+  - kind: Rule
+    priority: 10
+    match: Host(`valorant.gathering.org`)
+    services:
+    - name: valorant-site
+      port: 80
+  tls:
+    secretName: valorant-ingress
