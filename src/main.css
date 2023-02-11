@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "Druk";
+        src: url('/static/fonts/Druk-Medium.woff2') format('woff2'),
+             url('/static/fonts/Druk-Medium.woff') format('woff');
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @media only screen and (min-width: 1500px) {
+        .custom-hero-background {
+            background-image: url('/static/hero1.png'), url('/static/hero2.png');
+            background-position: right bottom, left top;
+            background-repeat: no-repeat, no-repeat;
+        }
+    }
+
+    .custom-info-background {
+        background-image: url('/static/tg2018.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .custom-prizes-background {
+        background-image: url('/static/nautical.png'), url('/static/star.png');
+        background-position: center center, center center;
+        background-repeat: no-repeat, no-repeat;
+    }
+}
