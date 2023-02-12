@@ -22,4 +22,4 @@ spec:
         - name: web
           containerPort: 80
   strategy:
-    type: Recreate
+    type: RollingUpdate
